@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<script>
+alert("欢迎使用本款猜数字游戏！！！*0.0*");
+do
+{
+	var end;
+	var result=parseInt(prompt("请输入你的数："));
+	var RD=Math.random()*100+1;
+	if(result==RD)
+	{
+		alert("恭喜你回答正确！！！");
+		end=confirm("是否乘胜追击？");
+		}
+	 else
+	 {
+		  if(result<RD)
+		{
+			alert("你的数小啦！！！");
+			end=confirm("敢不敢再来一次？");
+			}
+		else if(result>RD)
+		{
+			alert("你的数大啦！！！");
+			end=confirm("敢不敢再来一次？");
+			}
+		else
+		{
+			}
+		 }
+	
+    
+	}while(end)
+alert("Bye!!!");
+</script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+*{ margin:0; padding:0;}
+.ok{
+	width:600px; height:300px; margin:0 auto;
+	position:relative;
+	} 
+#l{
+	width: 50px;
+	height: 100px;
+	opacity:0.2;
+	background-image: url(tb.png);
+	background-repeat: no-repeat;
+	filter: Alpha(Opacity=30);
+	position:absolute;
+	left:0;
+	top:30%;
+	
+}
+#r{
+	width: 50px;
+	height: 100px;
+	opacity:0.2;
+	background: url(tb.png) no-repeat right top;
+	filter: Alpha(Opacity=30);
+	position:absolute;
+	right:0;
+	top:30%;
+}
+</style>
+</head>
+<body>
+<div class="ok"><img src="a8d9d0f5e411f7eef7cdb5338c3b03af.jpg" width="600" height="300"  id="mg"/>
+	<div id="l" onclick="zuo()" onmouseover="over('l')" onmouseout="out('l')"></div>
+	<div id="r" onclick="you()" onmouseover="over('r')" onmouseout="out('r')"></div>
+
+</div>
+<script>
+var i=0;
+var timer;
+window.onload=dong;
+	var ok=new Array()
+	ok[0]="388e4b19d36eb22b4cd0c2c92add639e.jpg";
+	ok[1]="87736bc98985ca1c52175e3f6764786a.jpg";
+	ok[2]="93113bc39bc48368ab8bcaabc479afa1.jpg";
+	ok[3]="a8d9d0f5e411f7eef7cdb5338c3b03af.jpg";
+	ok[4]="b5937e1352c4f947413ec7384a793c19.jpg";
+	ok[5]="d181f4eeae80bf4235f4b12b5d8d6934.jpg";
+	function dong()
+		{
+			i++;
+			if(i==ok.length)
+			{
+				i=0;
+				}
+			document.getElementById("mg").src=ok[i];
+		   timer=setTimeout("dong()",2000);
+			}
+			function zuo()
+			{
+				if(i>0)
+				{
+					i--;
+					}
+				else
+				{
+					i=ok.length-1;
+					}
+				document.getElementById("mg").src=ok[i];
+				}
+				function you()
+			{
+				if(i<ok.length-1)
+				{
+					i++;
+					}
+				else
+				{
+					i=0;
+					}
+				document.getElementById("mg").src=ok[i];
+				}
+				function over(id)
+				{
+					clearTimeout(timer);
+					document.getElementById(id).style.opacity=0.7;
+					}
+				function out(id)
+				{
+					timer=setTimeout("dong()",2000);
+					document.getElementById(id).style.opacity=0.2;
+					}
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<script>
+var score=parseInt(prompt("请输入你的成绩："));
+/*if(score>=90&&score<=100)
+{
+	alert("你的等级为：优");
+	}
+else if(score>=80&&score<90)
+{
+	alert("你的等级为：良");
+	}
+else if(score>=70&&score<80)
+{
+	alert("你的等级为：中");
+	}
+else if(score>=60&&score<70)
+{
+	alert("你的等级为：合格");
+	}
+else if(score>=0&&score<60)
+{
+	alert("不好意思同学你的成绩不及格！");
+	}
+	else
+	{
+		alert("请输入正确的成绩后继续查询！");
+		}*/
+score=score/10;
+switch(score)
+{
+	case 9:
+	case 10:alert("优！");break;
+	case 8:
+	case 7:alert("良！");break;
+	case 6:alert("中！");break;
+	case 5:
+	case 4:
+	case 3:
+	case 2:
+	case 1:
+	case 0:alert("差！");break;
+	default:alert("输入数据错误！");break;
+	}
+</script>
+</body>
+</html>
